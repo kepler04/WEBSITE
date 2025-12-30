@@ -1,0 +1,122 @@
+/* =========================================
+   ESTILO SOLO PARA CELULAR (HEADER NUEVO)
+   ========================================= */
+
+/* 1. INTERRUPTOR: Apagamos el de PC, Prendemos el Móvil */
+.header-pc {
+    display: none !important; /* Adiós header de compu */
+}
+
+/* EN css/movil.css */
+
+.header-movil {
+    display: block !important;
+    background-color: #0d1b2a;
+    
+    /* --- ESTAS SON LAS LÍNEAS MÁGICAS --- */
+    position: fixed; /* Se queda pegado a la pantalla */
+    top: 0;          /* Pegado al techo */
+    left: 0;         /* Pegado a la izquierda */
+    width: 100%;     /* Ocupa todo el ancho */
+    z-index: 9999;   /* Asegura que flote ENCIMA de todo lo demás */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Una sombrita elegante */
+}
+
+/* 2. LA BARRA SUPERIOR (Donde está el Logo y las Rayas) */
+.movil-bar {
+    display: flex;
+    justify-content: space-between; /* ¡ESTO MANDA EL BOTÓN A LA DERECHA! */
+    align-items: center;
+    padding: 15px 20px;
+    height: 80px;
+}
+
+/* Ajuste del logo para que combine bien con las letras grandes */
+.logo-movil {
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    border: 2px solid #d35400;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    /* Ya no necesitas margin-left: auto aquí porque el justify-content lo hace solo */
+}
+
+/* 3. EL MENÚ DESPLEGABLE */
+.movil-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%; /* Oculto */
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #0d1b2a;
+    transition: left 0.4s ease;
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.movil-menu.active {
+    left: 0; /* Visible */
+}
+
+/* Lista de enlaces */
+.movil-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.movil-menu li {
+    margin-bottom: 25px;
+}
+
+.movil-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: block;
+}
+
+/* Botón Naranja Móvil */
+.btn-call-mobile {
+    background-color: #d35400;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* =========================================
+   ESTILOS PARA MARCA "DJA"
+   ========================================= */
+
+.branding-movil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px; /* Un poco más de espacio entre logo y letras */
+}
+
+/* EN css/movil.css - Reemplaza el bloque .nombre-logo */
+
+/* EN css/movil.css - Reemplaza el bloque .nombre-logo */
+
+.nombre-logo {
+    color: white;
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna premium */
+    font-size: 1.4rem;
+    font-weight: 500; /* Un peso medio, más fino y elegante que el "bold" tosco */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Bastante separación para un look premium */
+}
