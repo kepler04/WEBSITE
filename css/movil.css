@@ -1,4 +1,15 @@
 /* =========================================
+   CANDADO DE SEGURIDAD (ANTI-BAMBOLEO)
+   ========================================= */
+html, body {
+    width: 100%;
+    overflow-x: hidden !important; /* ESTO ES LA CLAVE */
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
    ESTILO SOLO PARA CELULAR (HEADER NUEVO)
    ========================================= */
 
@@ -119,4 +130,5 @@
     font-weight: 500; /* Un peso medio, más fino y elegante que el "bold" tosco */
     text-transform: uppercase;
     letter-spacing: 2px; /* Bastante separación para un look premium */
+
 }
